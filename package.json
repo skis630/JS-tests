@@ -1,0 +1,11 @@
+{
+  "name": "ex1",
+  "version": "1.0.0",
+  "description": "testing palindrome",
+  "main": "Ex1-function.js",
+  "scripts": {
+    "test": "mocha stars"
+  },
+  "author": "Sara Kisch",
+  "license": "ISC"
+}
