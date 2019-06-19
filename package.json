@@ -9,6 +9,7 @@
   "author": "Sara Kisch",
   "license": "ISC",
   "dependencies": {
+    "deep-equal": "^1.0.1",
     "mocha": "^6.1.4"
   }
 }
