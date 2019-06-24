@@ -24,61 +24,57 @@ function transpose(matrix) {
 }
 
 describe("Symmetric matrices:", function() {
-    it("should return a 2 x 2 transpose", function() {
-        expect(transpose([
-                            [1, 2],
-                            [3, 4]
-                        ])).to.deep.equal([
-                                        [1, 3],
-                                        [2, 4]
-                                    ]);
+    it("should transpose a 2x2 matrix", function() {
+        const matrix = [[1,2],[3,4]];
+        const transposed = [[1,3],[2,4]];
+        expect(transpose(matrix)).to.deep.equal(transposed);
     });
-    it("should return a 3 x 3 transpose", function() {
-        expect(transpose([
-                            [1, 2, 3],
-                            [3, 4, 5],
-                            [6, 7, 8]
-                        ])).to.deep.equal([
-                                        [1, 3, 6],
-                                        [2, 4, 7],
-                                        [3, 5, 8]
-                                    ]);
+    it("should transpose a 3x3 matrix", function() {
+        const matrix = [[1,2,3],[3, 4, 5],[6, 7, 8]];
+        const transposed = [[1, 3, 6],[2, 4, 7],[3, 5, 8]];
+        expect(transpose(matrix)).to.deep.equal(transposed);
     });
-    it("should return a 3 x 3 transpose", function() {
-        expect(transpose([
+    it("should transpose a 3x3 matrix", function() {
+        const matrix = [
                             [1, 2, 9],
                             [4, 5, 45],
                             [7, 6, 2]
-                        ])).to.deep.equal([
-                                        [1, 4, 7],
-                                        [2, 5, 6],
-                                        [9, 45, 2]
-                                    ]);
+                        ];
+        const transposed = [
+                                [1, 4, 7],
+                                [2, 5, 6],
+                                [9, 45, 2]
+                            ];
+        expect(transpose(matrix)).to.deep.equal(transposed);
     });
 });
 
 describe("Assymetric matrices:", function() {
-    it("should return transpose", function() {
-        expect(transpose([
+    it("Should return the transpose matrix:", function() {
+        const matrix = [
                             [1, 2, 3],
                             [4, 5]
-                        ])).to.deep.equal([
-                                        [1, 4],
-                                        [2, 5],
-                                        [3]
-                                    ]);
-                                });
-    it("should return transpose", function() {
-        expect(transpose([
+                        ];
+        const transposed = [
+                                [1, 4],
+                                [2, 5],
+                                [3]
+                            ];
+        expect(transpose(matrix)).to.deep.equal(transposed);
+    });
+    it("should return the transpose", function() {
+        const matrix = [
                             [1,2,3],
                             [4,5],
                             [6,7,8,9]
-                        ])).to.deep.equal([
-                                            [1,4,6],
-                                            [2,5,7],
-                                            [3, ,8],
-                                            [ , ,9]
-                                        ]);
+                        ];
+        const transposed = [
+                                [1,4,6],
+                                [2,5,7],
+                                [3, ,8],
+                                [ , ,9]
+                            ];
+        expect(transpose(matrix)).to.deep.equal(transposed);
     });
 });
 
